@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA9065142E2BF25F0063A365 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BA9065132E2BF25F0063A365 /* FirebaseAppDistribution-Beta */; };
+		BA9065162E2BF25F0063A365 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BA9065152E2BF25F0063A365 /* FirebaseAuth */; };
+		BA9065182E2BF25F0063A365 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BA9065172E2BF25F0063A365 /* FirebaseAuthCombine-Community */; };
+		BA90651A2E2BF25F0063A365 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BA9065192E2BF25F0063A365 /* FirebaseFirestore */; };
+		BAA10CD32E2CCA630056DD7B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = BAA10CD22E2CCA630056DD7B /* FirebaseCore */; };
+		BAA10CD52E2CCA630056DD7B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BAA10CD42E2CCA630056DD7B /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAF2D2692E25884600CE7321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF2D24B2E25884400CE7321 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAF2D2522E25884400CE7321;
+			remoteInfo = StudyForge;
+		};
+		BAF2D2732E25884600CE7321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAF2D24B2E25884400CE7321 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAF2D2522E25884400CE7321;
+			remoteInfo = StudyForge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAF2D2532E25884400CE7321 /* StudyForge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyForge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF2D2682E25884600CE7321 /* StudyForgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyForgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF2D2722E25884600CE7321 /* StudyForgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyForgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BAF2D2552E25884400CE7321 /* StudyForge */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StudyForge;
+			sourceTree = "<group>";
+		};
+		BAF2D26B2E25884600CE7321 /* StudyForgeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StudyForgeTests;
+			sourceTree = "<group>";
+		};
+		BAF2D2752E25884600CE7321 /* StudyForgeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StudyForgeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAF2D2502E25884400CE7321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9065142E2BF25F0063A365 /* FirebaseAppDistribution-Beta in Frameworks */,
+				BAA10CD32E2CCA630056DD7B /* FirebaseCore in Frameworks */,
+				BA90651A2E2BF25F0063A365 /* FirebaseFirestore in Frameworks */,
+				BA9065182E2BF25F0063A365 /* FirebaseAuthCombine-Community in Frameworks */,
+				BA9065162E2BF25F0063A365 /* FirebaseAuth in Frameworks */,
+				BAA10CD52E2CCA630056DD7B /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D2652E25884600CE7321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D26F2E25884600CE7321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAF2D24A2E25884400CE7321 = {
+			isa = PBXGroup;
+			children = (
+				BAF2D2552E25884400CE7321 /* StudyForge */,
+				BAF2D26B2E25884600CE7321 /* StudyForgeTests */,
+				BAF2D2752E25884600CE7321 /* StudyForgeUITests */,
+				BAF2D2542E25884400CE7321 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAF2D2542E25884400CE7321 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAF2D2532E25884400CE7321 /* StudyForge.app */,
+				BAF2D2682E25884600CE7321 /* StudyForgeTests.xctest */,
+				BAF2D2722E25884600CE7321 /* StudyForgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAF2D2522E25884400CE7321 /* StudyForge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAF2D27C2E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForge" */;
+			buildPhases = (
+				BAF2D24F2E25884400CE7321 /* Sources */,
+				BAF2D2502E25884400CE7321 /* Frameworks */,
+				BAF2D2512E25884400CE7321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BAF2D2552E25884400CE7321 /* StudyForge */,
+			);
+			name = StudyForge;
+			packageProductDependencies = (
+				BA9065132E2BF25F0063A365 /* FirebaseAppDistribution-Beta */,
+				BA9065152E2BF25F0063A365 /* FirebaseAuth */,
+				BA9065172E2BF25F0063A365 /* FirebaseAuthCombine-Community */,
+				BA9065192E2BF25F0063A365 /* FirebaseFirestore */,
+				BAA10CD22E2CCA630056DD7B /* FirebaseCore */,
+				BAA10CD42E2CCA630056DD7B /* FirebaseStorage */,
+			);
+			productName = StudyForge;
+			productReference = BAF2D2532E25884400CE7321 /* StudyForge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAF2D2672E25884600CE7321 /* StudyForgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAF2D27F2E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForgeTests" */;
+			buildPhases = (
+				BAF2D2642E25884600CE7321 /* Sources */,
+				BAF2D2652E25884600CE7321 /* Frameworks */,
+				BAF2D2662E25884600CE7321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAF2D26A2E25884600CE7321 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BAF2D26B2E25884600CE7321 /* StudyForgeTests */,
+			);
+			name = StudyForgeTests;
+			packageProductDependencies = (
+			);
+			productName = StudyForgeTests;
+			productReference = BAF2D2682E25884600CE7321 /* StudyForgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAF2D2712E25884600CE7321 /* StudyForgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAF2D2822E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForgeUITests" */;
+			buildPhases = (
+				BAF2D26E2E25884600CE7321 /* Sources */,
+				BAF2D26F2E25884600CE7321 /* Frameworks */,
+				BAF2D2702E25884600CE7321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAF2D2742E25884600CE7321 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BAF2D2752E25884600CE7321 /* StudyForgeUITests */,
+			);
+			name = StudyForgeUITests;
+			packageProductDependencies = (
+			);
+			productName = StudyForgeUITests;
+			productReference = BAF2D2722E25884600CE7321 /* StudyForgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAF2D24B2E25884400CE7321 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					BAF2D2522E25884400CE7321 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					BAF2D2672E25884600CE7321 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BAF2D2522E25884400CE7321;
+					};
+					BAF2D2712E25884600CE7321 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BAF2D2522E25884400CE7321;
+					};
+				};
+			};
+			buildConfigurationList = BAF2D24E2E25884400CE7321 /* Build configuration list for PBXProject "StudyForge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAF2D24A2E25884400CE7321;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BAF2D2542E25884400CE7321 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAF2D2522E25884400CE7321 /* StudyForge */,
+				BAF2D2672E25884600CE7321 /* StudyForgeTests */,
+				BAF2D2712E25884600CE7321 /* StudyForgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAF2D2512E25884400CE7321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D2662E25884600CE7321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D2702E25884600CE7321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAF2D24F2E25884400CE7321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D2642E25884600CE7321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF2D26E2E25884600CE7321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAF2D26A2E25884600CE7321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAF2D2522E25884400CE7321 /* StudyForge */;
+			targetProxy = BAF2D2692E25884600CE7321 /* PBXContainerItemProxy */;
+		};
+		BAF2D2742E25884600CE7321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAF2D2522E25884400CE7321 /* StudyForge */;
+			targetProxy = BAF2D2732E25884600CE7321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BAF2D27A2E25884600CE7321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAF2D27B2E25884600CE7321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAF2D27D2E25884600CE7321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StudyForge/Preview Content\"";
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAF2D27E2E25884600CE7321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StudyForge/Preview Content\"";
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAF2D2802E25884600CE7321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyForge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StudyForge";
+			};
+			name = Debug;
+		};
+		BAF2D2812E25884600CE7321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyForge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StudyForge";
+			};
+			name = Release;
+		};
+		BAF2D2832E25884600CE7321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyForge;
+			};
+			name = Debug;
+		};
+		BAF2D2842E25884600CE7321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU9WLH5878;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = YK.StudyForgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyForge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAF2D24E2E25884400CE7321 /* Build configuration list for PBXProject "StudyForge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAF2D27A2E25884600CE7321 /* Debug */,
+				BAF2D27B2E25884600CE7321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAF2D27C2E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAF2D27D2E25884600CE7321 /* Debug */,
+				BAF2D27E2E25884600CE7321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAF2D27F2E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAF2D2802E25884600CE7321 /* Debug */,
+				BAF2D2812E25884600CE7321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAF2D2822E25884600CE7321 /* Build configuration list for PBXNativeTarget "StudyForgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAF2D2832E25884600CE7321 /* Debug */,
+				BAF2D2842E25884600CE7321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA9065132E2BF25F0063A365 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		BA9065152E2BF25F0063A365 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BA9065172E2BF25F0063A365 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		BA9065192E2BF25F0063A365 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BAA10CD22E2CCA630056DD7B /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		BAA10CD42E2CCA630056DD7B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA9065122E2BF25F0063A365 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BAF2D24B2E25884400CE7321 /* Project object */;
+}
