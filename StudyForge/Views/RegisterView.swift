@@ -4,12 +4,7 @@
 //
 //  Created by Yash  Khanande on 20/07/25.
 //
-//
-//  RegisterView.swift
-//  StudyForge
-//
-//  Created by Yash Khanande on 20/07/25.
-//
+
 import SwiftUI
 import Firebase
 import FirebaseAuth
@@ -20,7 +15,7 @@ struct RegisterView: View {
     @State private var name = ""
     @State private var email = ""
     @State private var password = ""
-    @State private var selectedCountry = ""
+    @State private var selectedCountry = "Other"
     @State private var errorMessage = ""
     @State private var showSuccess = false
 
@@ -30,57 +25,66 @@ struct RegisterView: View {
     let countries = ["USA", "India", "UK", "Australia", "Canada"]
 
     var body: some View {
-        VStack(spacing: 50){
-           
-            Text("Register")
-                .font(.largeTitle.bold())
-                .foregroundStyle(.indigo)
-                
-            
-            
-            VStack (spacing: 20){
-               
-                Group{
-                    TextField("Name", text: $name)
-                    TextField("Email", text: $email)
-                    SecureField("Password", text: $password)
-                    }
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-               
-                      Picker("Select Country",selection: $selectedCountry) {
-                          Spacer()
-                          ForEach(countries, id: \.self) { Text($0) }
-                      }.pickerStyle(.menu)
-               
-            }
-            
-          
-            
-            if !errorMessage.isEmpty {
-                Text(errorMessage).foregroundColor(.red)
-            }
-           
-            Button {
-                register()
-            }label:{Text("Register")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.indigo.opacity(0.2))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-            }
-            Spacer()
-            
-            if showSuccess {
-                Text("Registration Successful!")
-                    .foregroundColor(.green)
-            }
-        }
-        .padding()
-    }
+        NavigationStack{
+            VStack(spacing : 20){
+                Text("Register")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(.indigo)
+                   
 
+                Form{
+                    VStack (spacing: 20){
+                        //
+                        Section{
+                            Group{
+                                TextField("Name", text: $name)
+                                TextField("Email", text: $email)
+                                SecureField("Password", text: $password)
+                            }
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(Color.gray.opacity(0.2))
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
+                            Picker("Select Country",selection: $selectedCountry) {
+                                Spacer()
+                                ForEach(countries, id: \.self) { Text($0) }
+                            }.pickerStyle(.menu)
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    if !errorMessage.isEmpty {
+                        Text(errorMessage).foregroundColor(.red)
+                    }
+                    
+                    
+                    
+                   
+                    
+                    
+                    if showSuccess {
+                        Text("Registration Successful!")
+                            .foregroundColor(.green)
+                    }
+                }.scrollContentBackground(.hidden)
+                VStack{
+                    Button {
+                        register()
+                    }label:{Text("Register")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.indigo.opacity(0.2))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    
+                }.padding()
+               
+            }.background(Color.gray.opacity(0.1))
+        }
+    }
     func register() {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
