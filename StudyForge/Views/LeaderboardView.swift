@@ -1,9 +1,10 @@
 //
-//  LeaderboardView 2.swift
+//  LeaderboardView.swift
 //  StudyForge
 //
-//  Created by Yash  Khanande on 30/07/25.
+//  Created by Yash Khanande on 30/07/25.
 //
+
 import SwiftUI
 import Firebase
 import FirebaseAuth
@@ -19,9 +20,8 @@ struct LeaderboardView: View {
         Array(
             leaderboardUsers
                 .sorted(by: { $0.streak > $1.streak })
-                .prefix(100)
                 .enumerated()
-                .map { (offset, user) in (index: offset, user: user) }
+                .map { (index, user) in (index: index, user: user) }
         )
     }
 
@@ -84,30 +84,23 @@ struct LeaderboardView: View {
     }
 
     private func fetchLeaderboard() {
-        isLoading = true
-        showError = false
-
         guard let firebaseUID = Auth.auth().currentUser?.uid else {
             showError = true
             isLoading = false
             return
         }
 
+        isLoading = true
+        showError = false
+
         let currentUser = userService.currentUser
-
-        // Avoid blank screen if currentUser not ready
-        guard !currentUser.name.isEmpty else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                fetchLeaderboard()
-            }
-            return
-        }
-
         let db = Firestore.firestore()
         db.collection("users")
-            .whereField("goal", isEqualTo: currentUser.studyGoal.rawValue.lowercased())
+        db.collection("users")
             .whereField("country", isEqualTo: currentUser.country)
-            .order(by: "streak", descending: true)
+            .whereField("goal", isEqualTo: currentUser.studyGoal.rawValue)
+//            .order(by: "streak", descending: true)
+//            .order(by: "name", descending: false)
             .limit(to: 100)
             .getDocuments { snapshot, error in
                 DispatchQueue.main.async {
@@ -142,7 +135,7 @@ struct LeaderboardView: View {
                         )
                     }
 
-                    // If current user not in top 100, add manually
+                    // Ensure current user is shown even if not in top 100
                     if !fetchedUsers.contains(where: { $0.id == firebaseUID }) {
                         fetchedUsers.append(
                             LeaderboardUser(
@@ -160,7 +153,6 @@ struct LeaderboardView: View {
             }
     }
 }
-
 
 #Preview {
     LeaderboardView()
