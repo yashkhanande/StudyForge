@@ -25,7 +25,7 @@ class UserService: ObservableObject {
            let savedUser = try? JSONDecoder().decode(UserModel.self, from: data) {
             self.currentUser = savedUser
         } else {
-            self.currentUser = UserModel(id: UUID(), name: "student", studyGoal: .upsc, streak: 0, totalStudyTime: 0 , country: "India")
+            self.currentUser = UserModel(id: UUID(), name: "student", studyGoal: .upsc, streak: 0, totalStudyTime: 0 , country: "India",bio: "")
             saveUser()
         }
     }
@@ -94,7 +94,7 @@ class UserService: ObservableObject {
     }
 
     func resetUser() {
-        currentUser = UserModel(id: UUID(), name: "newName", studyGoal: .upsc, streak: 0, totalStudyTime: 0,country : "India")
+        currentUser = UserModel(id: UUID(), name: "newName", studyGoal: .upsc, streak: 0, totalStudyTime: 0,country : "India", bio : "")
         saveUser()
     }
     
@@ -127,7 +127,7 @@ class UserService: ObservableObject {
             let goalRaw = data["goal"] as? String ?? "upsc"
             let country = data["country"] as? String ?? "India"
             let studyGoal = StudyGoal(rawValue: goalRaw) ?? .upsc
-
+            let bio = data["bio"] as? String ?? ""
             // Update local model
             self.currentUser = UserModel(
                 id: UUID(), // UUID isn't stored in Firestore, can be regenerated or stored separately
@@ -135,7 +135,8 @@ class UserService: ObservableObject {
                 studyGoal: studyGoal,
                 streak: streak,
                 totalStudyTime: data["totalStudyTime"] as? TimeInterval ?? 0,
-                country: country
+                country: country,
+                bio: bio
             )
 
             self.saveUser()

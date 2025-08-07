@@ -29,10 +29,17 @@ struct ProfileView: View {
                 Text("🔥 Streak \(user.streak)")
                     .font(.headline)
                     .foregroundStyle(Color.orange)
-                
-                Text("Hey Everyone i am preparing for UPSC And i will be happy to conncet with you")
-                    .multilineTextAlignment(.center)
-                    .padding()
+                if let bio = user.bio, !bio.isEmpty {
+                    Text(bio)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                } else {
+                    Text("No bio available")
+                        .italic()
+                        .foregroundColor(.gray)
+                        .padding()
+                }
+
                 Text("Total Time Studied")
                     .fontWeight(.bold)
                     .font(.title2)

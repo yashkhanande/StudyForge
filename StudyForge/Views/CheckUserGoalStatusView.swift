@@ -37,6 +37,7 @@ struct CheckUserGoalStatusView: View {
             }
 
             let goal = data["goal"] as? String ?? ""
+          
             if goal.isEmpty {
                 path.append(Route.goalSelection(userId: user.uid))
             } else {

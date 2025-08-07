@@ -19,11 +19,12 @@ struct LeaderboardView: View {
     var topUsers: [(index: Int, user: LeaderboardUser)] {
         Array(
             leaderboardUsers
-                .sorted(by: { $0.streak > $1.streak })
+                .sorted(by: { ($0.streak ) > ($1.streak) })
                 .enumerated()
                 .map { (index, user) in (index: index, user: user) }
         )
     }
+
 
     var body: some View {
         NavigationStack {
@@ -123,13 +124,13 @@ struct LeaderboardView: View {
                         let uid = doc.documentID
                         let name = data["name"] as? String ?? "Unknown"
                         let streak = data["streak"] as? Int ?? 0
-
+                        let bio = data["bio"] as? String ?? ""
                         fetchedUsers.append(
                             LeaderboardUser(
                                 id: uid,
                                 name: name,
                                 streak: streak,
-                                isCurrentUser: uid == firebaseUID,
+                                bio : bio, isCurrentUser: uid == firebaseUID,
                                 rank: index + 1
                             )
                         )
@@ -142,6 +143,7 @@ struct LeaderboardView: View {
                                 id: firebaseUID,
                                 name: currentUser.name,
                                 streak: currentUser.streak,
+                                bio: currentUser.bio,
                                 isCurrentUser: true,
                                 rank: -1
                             )

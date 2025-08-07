@@ -19,10 +19,10 @@ enum StudyGoal : String , CaseIterable ,Codable{
 struct UserModel: Codable {
     var id: UUID
     var name: String
-    
     var studyGoal: StudyGoal
     var streak: Int
     var totalStudyTime: TimeInterval
     var country: String
+    var bio : String
 }
 

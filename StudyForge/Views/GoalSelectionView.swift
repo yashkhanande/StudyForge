@@ -19,6 +19,7 @@ struct GoalSelectionView: View {
     @State private var isLoading = true
     @State private var showSuccessAlert = false
     @State private var selectedFlavor: String = ""
+    @State private var bio = ""
     @AppStorage("isLoggedIn") private var isLoggedIn = false
     @AppStorage("userId") private var storedUserId: String = ""
 
@@ -35,9 +36,11 @@ struct GoalSelectionView: View {
                     Text("Set or Update Goal")
                         .font(.title)
                         .padding(.top)
+                        .foregroundStyle(Color.indigo)
+                        .bold()
                
                 
-                List{
+                Form{
                         Picker(selection: $selectedCountry) {
                             ForEach(countries, id: \.self) { Text($0) }
                         }label : {
@@ -50,10 +53,16 @@ struct GoalSelectionView: View {
                         }label : {
                             Text("Select Goal")
                         }
-                    
+                    Section{
+                        Text("Update Your Bio")
+                        TextField("Bio" , text: $bio ,axis:.vertical)
+                    }
+                                        
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .frame(height: 170)
+                .scrollContentBackground(.hidden)
+//                .clipShape(RoundedRectangle(cornerRadius: 40))
+//                .frame(maxHeight: 400)
+                
                     Button{
                         saveGoalAndCountry()
                     }label :{
@@ -72,7 +81,7 @@ struct GoalSelectionView: View {
                 }
             }
         }
-        .padding()
+//        .padding()
         .onAppear {
             fetchUserData()
         }
@@ -104,7 +113,11 @@ struct GoalSelectionView: View {
                 self.isLoading = false
                 return
             }
+            
+            self.bio = data["bio"] as? String ?? ""
+            
 
+            
             self.country = data["country"] as? String ?? ""
             self.selectedCountry = self.country // Initialize selectedCountry
             let existingGoal = data["goal"] as? String ?? ""
@@ -134,7 +147,8 @@ struct GoalSelectionView: View {
 
         let updateData: [String: Any] = [
             "country": selectedCountry,
-            "goal": selectedGoal
+            "goal": selectedGoal,
+            "bio" : bio
         ]
 
         userRef.setData(updateData, merge: true) { error in
